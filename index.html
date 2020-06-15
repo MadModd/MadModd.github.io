@@ -1,51 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" >
 <head>
-    <meta charset="UTF-8">
-    <title>A Fancy Todo List</title>
-    <link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8">
+  <title>My first website about Anakin </title>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital@1&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="./style.css">
 
 </head>
-
 <body>
-    <div class="container">
-        <div class="cim">
-            <h1>Todo list</h1>
-        </div>
-        <div class="listContainer">
-            <div class="listHeader">
-                <h2>Todos</h2>
-                <div class="tooltip">
-                    <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="question-circle"
-                        class="tooltip svg-inline--fa fa-question-circle fa-w-16" role="img"
-                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                        <path
-                            d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 448c-110.532 0-200-89.431-200-200 0-110.495 89.472-200 200-200 110.491 0 200 89.471 200 200 0 110.53-89.431 200-200 200zm107.244-255.2c0 67.052-72.421 68.084-72.421 92.863V300c0 6.627-5.373 12-12 12h-45.647c-6.627 0-12-5.373-12-12v-8.659c0-35.745 27.1-50.034 47.579-61.516 17.561-9.845 28.324-16.541 28.324-29.579 0-17.246-21.999-28.693-39.784-28.693-23.189 0-33.894 10.977-48.942 29.969-4.057 5.12-11.46 6.071-16.666 2.124l-27.824-21.098c-5.107-3.872-6.251-11.066-2.644-16.363C184.846 131.491 214.94 112 261.794 112c49.071 0 101.45 38.304 101.45 88.8zM298 368c0 23.159-18.841 42-42 42s-42-18.841-42-42 18.841-42 42-42 42 18.841 42 42z">
-                        </path>
-                    </svg>
-                    <span class="tooltiptext">
-                        Egy kattintás a pipán - Kész/nemkész.
-                        <hr>
-                        Dupla kattintás a kukán - Törli a listából.
-                        <hr>
-                        A lista elemeit húzással átrendezheted.
-                    </span>
-                </div>
-            </div>
-            <div class="listInput">
-                <div class="inContainer"><input type="text" id="inTodo" placeholder="Add ToDo"></div>
-                <button id="btnTodo">Add todo</button>
-            </div>
-            <ul id="sortable" class="todoList">
-            </ul>
-        </div>
+<!-- partial:index.partial.html -->
+<article class="AnakinCV">
+  <header>
+    <img src="first-website-header.png" alt="">
+    <figcaption><span style="font-size: 35px">Hi, My name is</span><br><span style="font-size: 72px">Anakin Skywalker</span></figcaption>
+  </header>
+  <main>
+    <div class="first_part">
+      <p><strong>Analytical, goal oriented leader</strong> with proven track record in management and enforcement Space Fleet Operations or Frontend Development. Wide range of hands-on experience, including:
+      </p>
+      <ul>
+        <li>Large scale construction projects oversight</li>
+        <li>Advanced forms of mind control</li>
+        <li>Planetary scale demolitions operations</li>
+        <li>Fugitive recovery services</li>
+      </ul>
     </div>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
-    <script src="./script.js"></script>
-
+    <blockquote id="firstquote">Together we can rule the galaxy
+    </blockquote>
+      <div class="second_part">
+        <h1>Notable achievements</h1>
+        <h2>Designed, built and piloted a custom pod racer. 32 BBY Boonta Eve Classic Race Champion</h2>
+        <p>In my spare time at Wald’s Parts junk shop I designed and built a Class III open cockpit Podracer capable of 588 mph top speed. Went on to win the Boonta Eve Classic race in 32 BBY - first ever win by a human. Generated documented company revenue of over 59 wupiupi during the course of my enslavement.</p>
+        <h2>Oversight of DS1 and DS2 Orbital Battle Stations construction projects</h2>
+        <p>During my tenure as a Supreme Imperial Fleet Commander I was in charge of large capital construction projects for the Deep Space Fleet. Performed acceptance testing of the DS1 SuperLaser in 0 BBY by annihilating Alderaan - a terrestrial class planet in the Core Worlds region. Successfully tripled the deep space fire power of the imperial fleet in accordance with the Tarkin Doctrine before losing both projects to run-away photon torpedoes.</p>        
+    </div>
+    <blockquote id="secondquote">I find your lack of faith disturbing.</blockquote>
+    <div class="third_part">
+      <h1>Experience</h1>
+      <h2>Sith Empire Headquarters, Dromund Kaas</h2>
+      <h3>Supreme Commander of Imperial Forces, Emperor’s Enforcer</h3>
+      <ul>
+        <li>As the right-hand man to Emperor Sidious, hunted down jedi survivors and enforced the will of the empire;</li>
+        <li>Oversaw construction of the first generation Death Star;</li>
+        <li>First ever Imperial Supreme Commander;</li>
+      </ul>
+      <h2>Wally’s Parts / Toyarian Watto junk shop, Mos Espa, Tatooine</h2>
+      <h3>Enslaved Volunteer</h3>
+      <ul>
+        <li>General help and front-desk retail operations at the junk shop, second hand droid parts, mechanical / droid repair services;</li>
+        <li>Designed and piloted custom-built Podracer, ran track-side operations for the podracing team;</li>
+      </ul>
+    </div>
+    <blockqoute id="thirdqoute">When I left you, I was but the learner; now I am the master.</blockqoute>
+    <div class="fourth_part">
+      <h1>Formal training</h1>
+      <h2>Green Fox Academy, Earth</h2>
+      <h3>Full stack developer</h3>
+      <ul>
+        <li>Padawan to Knight Tojas;</li>
+        <li>Learned programming with a specialisation in JavaScript and Front-end technologies</li>
+      </ul>
+      <h2>Sith Empire, Coruscant</h2>
+      <h3>Master of the Dark Side of the Force</h3>
+      <ul>
+        <li>Apprentice to Sith Lord Darth Sidious;</li>
+      </ul>
+      <h2>Jedi Order Academy, Coruscant</h2>
+      <h3>Master of Jedi Force</h3>
+      <ul>
+        <li>Padawan to Knight Obi Wan Kenobi. Bodyguard to Senator Padme Amidala during the Clone Wars of 22 BBY;</li>
+        <li>Graduated with donors;</li>
+      </ul>
+    </div>
+    <hr>
+    <footer>
+      <h1>Personal interests</h1>
+      <ul>
+        <li>Midi-Chlorian research as a hobby;</li>
+        <li>Recreational mind-control techniques;</li>
+        <li>Amateur and local club podracing.</li>
+      </ul>
+      <div class="next">
+      <a href="./modana.html">Please go to my brand new modified Anakin CV site</a>
+      </div>
+    </footer>
+  </main>
+     
+  </article>
+<!-- partial -->
+  
 </body>
-
 </html>

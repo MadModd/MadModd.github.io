@@ -1,297 +1,181 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  width: 100%;
-  height: 100%;
-  font-family: Arial;
-  font-size: 15px;
-}
-
-body {
-  background: linear-gradient(170deg, #00c9ff, #92fe9d);
-  background-attachment: fixed;
-  /*background: linear-gradient(170deg, #0072ff, #00c6ff);*/
-}
-
-@keyframes slide {
-  from {
-    background-position-x: 0;
-  }
-  to {
-    background-position-x: 1100px;
-  }
-}
-
-.cim {
-  /* width: calc(113px * 6.008); */
-  width: calc(100px * 5.66);
-  padding: 15px;
-  margin: 20px 0 20px;
-  font-size: 2.5em;
-  color: #cccccc;
-  text-shadow: -5px 3px 5px #444444;
-  display: flex;
-  border-radius: 15px;
-  box-shadow: -40px 25px 30px rgba(0,0,0,0.4);
-  /*outline: 1px solid red;*/
-  /* background-color: #2c3e50; */
-  background-color: rgb(34, 32, 30);
-  background-image: repeating-linear-gradient(
-    -45deg,
-    transparent,
-    transparent 40px,
-    #f1c40f 40px,
-    #f1970f 80px
-  );  
-  animation: slide 50000ms linear infinite;
-  will-change: background-position;
-}
-
-h1, h2 {
-  margin: auto;
-}
-
-.todoList {
-  width: 100%;
-  list-style: none;
-}
-
-.container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.listContainer {
-  background: linear-gradient(170deg, #0072ff, #00c6ff);
-  padding: 10px;
-  width: 350px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 150px;
-  box-shadow: -40px 25px 40px rgba(0,0,0,0.3);
-  border-radius: 10px;
-}
-
-.listHeader {
-  width: 100%;
-  height: 60px;
-  background-image: radial-gradient(circle at 29% 25%, hsla(280,0%,87%,0.1) 0%, hsla(280,0%,87%,0.1) 54%,transparent 54%, transparent 89%,transparent 89%, transparent 100%),radial-gradient(circle at 35% 35%, hsla(280,0%,87%,0.1) 0%, hsla(280,0%,87%,0.1) 2%,transparent 2%, transparent 48%,transparent 48%, transparent 100%),radial-gradient(circle at 47% 56%, hsla(280,0%,87%,0.1) 0%, hsla(280,0%,87%,0.1) 43%,transparent 43%, transparent 76%,transparent 76%, transparent 100%),radial-gradient(circle at 48% 84%, hsla(280,0%,87%,0.1) 0%, hsla(280,0%,87%,0.1) 64%,transparent 64%, transparent 84%,transparent 84%, transparent 100%),radial-gradient(circle at 31% 76%, hsla(280,0%,87%,0.1) 0%, hsla(280,0%,87%,0.1) 45%,transparent 45%, transparent 86%,transparent 86%, transparent 100%),linear-gradient(135deg, rgb(2, 39, 217),rgb(100, 100, 207));
-  font-size: 2em;
-  color: #cccccc;
-  text-shadow: -5px 3px 5px #444444;
-  display: flex;
-  margin-bottom: 5px;
-  position: relative;
-  border-radius: 8px 8px 0 8px;
-}
-
-.listInput {
-  width: 100%;
-}
-
-.inContainer {
-  background-image: radial-gradient(circle at 29% 25%, hsla(280,0%,87%,0.1) 0%, hsla(280,0%,87%,0.1) 54%,transparent 54%, transparent 89%,transparent 89%, transparent 100%),radial-gradient(circle at 35% 35%, hsla(280,0%,87%,0.1) 0%, hsla(280,0%,87%,0.1) 2%,transparent 2%, transparent 48%,transparent 48%, transparent 100%),radial-gradient(circle at 47% 56%, hsla(280,0%,87%,0.1) 0%, hsla(280,0%,87%,0.1) 43%,transparent 43%, transparent 76%,transparent 76%, transparent 100%),radial-gradient(circle at 48% 84%, hsla(280,0%,87%,0.1) 0%, hsla(280,0%,87%,0.1) 64%,transparent 64%, transparent 84%,transparent 84%, transparent 100%),radial-gradient(circle at 31% 76%, hsla(280,0%,87%,0.1) 0%, hsla(280,0%,87%,0.1) 45%,transparent 45%, transparent 86%,transparent 86%, transparent 100%),linear-gradient(135deg, rgb(2, 39, 217),rgb(100, 100, 207));
-  border-radius: 6px;
-}
-
-#inTodo {
-  border: 1px solid white;
-  background: rgba(255, 255, 255, 0.5);;
-  border-radius: 6px;
-  padding-left: 10px;
-  color: #666666;
-  font-size: 1.2em;
-  font-style: italic;
-}
-
-#btnTodo {
-  margin-top: 2px;
-  border: none;
-  border-radius: 6px;
-  border-top: 1px solid #96d1f8;
-  background: #65a9d7;
-  background: linear-gradient(#1c65a8, #65a9d7);
-  padding: 5px 10px;
-  box-shadow: rgba(0,0,0,1) 0 1px 0;
-  text-shadow: rgba(0,0,0,.4) 0 1px 0;
-  color: white;
-  text-decoration: none;
-  vertical-align: middle;
-}
-
-#btnTodo:hover {
-  border-top-color: #28597a;
-  background: #28597a;
-  color: #ccc;
-}
-
-#btnTodo:active {
-  border-top-color: #1b435e;
-  background: #1b435e;
-}
-
-#inTodo, .todoItem, #btnTodo {
-  width: 100%;
-  height: 35px;
-}
-
-.todoItem, #btnTodo {
-  cursor: ;
-}
-
-.todoItem {
-  display: flex;
-  margin-top: 5px;
-  background: rgba(0, 0, 0, 0.3);
-  border-radius: 5px;
-  /*outline: 1px solid red;*/
-}
-
-.todoItem:hover {
-  transform: scale(1.2);
-  transition-timing-function: cubic-bezier(0.42, 0, 1, 1);
-  transition-duration: 100ms;
-}
-
-.checked .fa-check-circle {
-  font-weight: bold;
-  font-style: italic;
-  
-  text-decoration-color: green;
-  text-shadow: 0 0 2px limegreen;
-  fill: red;
-}
-
-.checked .itemText {
-  color: #041d8b;
-  text-decoration: line-through;
-}
-
-.itemText {
-  font-weight: bold;
-  display: inline-block;
-  height: 100%;
-  line-height: 35px;
-  padding: 0 10px 0;
+.AnakinCV {
+  width: 1280px;
+  margin-left: auto;
   margin-right: auto;
-  color: #cccccc;
-  text-shadow: 0 0 1px white;
 }
-
-.item {
+header {
+  background: black;
+  display: flex;
+  position: relative;
+}
+img {
   width: 100%;
-  align-items: center;
+  margin-top: 4px;
+}
+figcaption {
+  font-family: "Abril Fatface", cursive;
+  color: #222;
+  width: 700px;
+  position: absolute;
+  left: 290px;
+  top: 250px;
+  line-height: 45px;
+}
+p {
+  font-family: "Josefin Sans", sans-serif;
+  color:  #222;
+}
+ul {
+  font-family: "Josefin Sans", sans-serif;
+  color:  #222;
+}
+.first_part {
+  width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px;
+  margin-top: 65px;
+  line-height: 30px;
+  color:  #222;
+}
+.second_part {
+  width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.third_part {
+  width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.fourth_part {
+  width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+}
+h1 {
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  font-size: 30px;
+  line-height: 50px;
+  color:  #222;
+}
+h2 {
+  font-family: "Josefin Sans", sans-serif;
+  line-height: 35px;
+  margin-top: 40px;
+  margin-bottom: 0;
+  color:  #222;
+}
+p {
+  line-height: 1.5em;
+}
+li {
+  list-style-type: square;
+}
+main {
+  position: relative;
+}
+#firstquote::before {
+  content: "\201C";
+  position: absolute;
+  left: 200px;
+  top: 245px;
+  font-size: 150px;
+}
+#firstquote {
+  font-family: "Abril Fatface", cursive;
+  font-size: 54px;
+  background: #444;
+  color: white;
+  width: 880px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 45px;
+  padding-bottom: 45px;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
-
-.fa-check-circle, .fa-trash-alt, .fa-question-circle {
-  width: 23px;
-  height: 23px;
-  display: inline-block;
-  margin-right: 5px;
+#secondquote {
+  font-family: "Abril Fatface", cursive;
+  font-size: 54px;
+  background: #444;
+  color: white;
+  width: 880px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 45px;
+  padding-bottom: 45px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
-
-.fa-check-circle {
-  fill: limegreen;
-  /* margin-right: 10px; */
-}
-.fa-checked-circle {
-  fill: red;
-}
-
-
-.fa-check-circle:hover {
-  fill: greenyellow
-}
-
-.fa-trash-alt {
-  fill: goldenrod;
-}
-
-.fa-trash-alt:hover {
-  fill: orange;
-}
-
-.fa-question-circle {
-  fill: #00c6ff;
-  margin-bottom: 5px;
+#secondquote::before {
+  content: "\201C";
   position: absolute;
-  bottom: 0;
-  right: 0;
-  /* left: 0; */
-  cursor: pointer;
+  left: 200px;
+  top: 980px;
+  font-size: 150px;
 }
-
-.fa-question-circle:hover {
-  fill: #773da7;
+h3 {
+  font-family: 'Merriweather', serif;
+  line-height: normal;
+  font-size: 16px;
+  margin-top: 0;
 }
-
-/* Tooltip container */
-.tooltip {
-  /*position: relative;*/
-  /* display: inline-block; */
-  /* border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+li {
+  line-height: 1.5em;
 }
-
-/* Tooltip text */
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 200px;
-  background-color: black;
-  color: #fff;
-  font-size: 10px;
+#thirdqoute {
+  font-family: "Abril Fatface", cursive;
+  font-size: 54px;
+  background: #444;
+  color: white;
+  width: 880px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding-top: 45px;
+  padding-bottom: 45px;
+  display: flex;
+/*   justify-content: center; */
+/*   align-items: center; */
   text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
-  line-height: 2em;
- 
-  /* Position the tooltip text - see examples below! */
+}
+#thirdqoute::before {
+  content: "\201C";
   position: absolute;
-  z-index: auto;
+  left: 200px;
+  top: 1680px;
+  font-size: 150px;
 }
-
-/* Show the tooltip text when you mouse over the tooltip container */
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-}
-
-.tooltip .tooltiptext {
-  top: 15px;
-  left: 105%;
-}
-
-.tooltip .tooltiptext::after {
-  content: "";
-  position: absolute;
-  top: 40%;
-  right: 100%; /* To the left of the tooltip */
-  margin-top: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: transparent black transparent transparent;
-}
-
-.tooltip .tooltiptext {
-  opacity: 0;
-  transition: opacity 5s;
-}
-
-.tooltip:hover .tooltiptext {
-  opacity: 0.8;
-}
-
 hr {
-  width: 80%;
-  margin: auto;
+ height: 4px;
+ border-width: 0px;
+ background-color: #222;
+   width: 810px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
+footer {
+  width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.next {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+a {
+  font-family: "Josefin Sans", sans-serif;
+  line-height: 35px;
+  font-size: 30px;
+  color: #333; 
+  text-decoration: none;
+  background: #aaaaaa;
+  padding: 20px;
+  }
